@@ -14,7 +14,6 @@ export_a1_channel_port=20201
 export_a1_rpc_port=8546
 
 export_b_ip=127.0.0.22
-export_b_group_id=1
 export_b0_p2p_port=30302
 export_b0_channel_port=20202
 export_b0_rpc_port=8547
@@ -23,7 +22,6 @@ export_b1_channel_port=20203
 export_b1_rpc_port=8548
 
 export_c_ip=127.0.0.33
-export_c_group_id=1
 export_c0_p2p_port=30304
 export_c0_channel_port=20204
 export_c0_rpc_port=8549
@@ -215,11 +213,11 @@ if [ ! -d "dist" ]; then
 	mkdir dist
 fi
 mv $1_nodes_installPackage_$date_str.tar.gz $2_nodes_installPackage_$date_str.tar.gz $3_nodes_installPackage_$date_str.tar.gz -t dist
-echo generator nodes install package ok
-echo
-echo
-echo
-echo success
-echo
-echo
-echo
+
+if [ $? != 0 ];then
+ echo "generator Failed! "
+ exit 1
+else
+ echo "generator success! "
+ exit 0
+fi
