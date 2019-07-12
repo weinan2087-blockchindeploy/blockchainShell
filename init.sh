@@ -30,6 +30,10 @@ if [ ! -f "meta/fisco-bcos" ]; then
     ./meta/fisco-bcos -v
 fi
 
-echo check ok 
-
-
+if [ $? != 0 ];then
+ echo "check env Failed! "
+ exit 1
+else
+ echo "check env success! "
+ exit 0
+fi
