@@ -136,11 +136,11 @@ if [ ! -d "dist" ]; then
 	mkdir dist
 fi
 mv $1_nodes_installPackage_$date_str.tar.gz $2_nodes_installPackage_$date_str.tar.gz -t dist
-echo generator nodes install package ok
-echo
-echo
-echo
-echo success
-echo
-echo
-echo
+
+if [ $? != 0 ];then
+ echo "generator Failed! "
+ exit 1
+else
+ echo "generator success! "
+ exit 0
+fi
