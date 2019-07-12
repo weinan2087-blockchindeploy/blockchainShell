@@ -1,16 +1,19 @@
 #!/bin/bash
 
-export user_check=$1
+# 1. check catalog
+if [ ! -d "console" ]; then
+    echo error ! not a console directory in `pwd`
+    exit 1
+fi
+if [ ! -d "generator" ]; then
+    echo error ! not a generator directory in `pwd`
+    exit 1
+fi
 
 # handle check env
-if [ "$1" = "check" ];then
- cd generator
- sh ./scripts/install.sh > tmpOut.log
- result=$(cat tmpOut.log)
-else
- echo parm is null !
- exit 1
-fi
+cd generator
+sh ./scripts/install.sh > tmpOut.log
+result=$(cat tmpOut.log)
 
 if [ `grep -c "successful" tmpOut.log` -eq '1' ]; then 
  echo "check successful!"
@@ -22,8 +25,10 @@ echo $result
 rm -rf tmpOut.log
 
 # download fisco-bcos
-./generator --download_fisco ./meta
-./meta/fisco-bcos -v
+if [ ! -f "meta/fisco-bcos" ]; then
+    ./generator --download_fisco ./meta
+    ./meta/fisco-bcos -v
+fi
 
 echo check ok 
 
