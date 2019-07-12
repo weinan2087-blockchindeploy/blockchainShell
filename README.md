@@ -27,13 +27,13 @@
 * sh init.sh  
 环境依赖检查，在执行其它脚本前需保证该脚本执行全部通过，否则其他脚本无法执行。
 * sh a1b1.sh    机构A名称  机构B名称
-构建两机构，每个机构两个节点，相同账本（群组1）的区块链环境，执行后的节点结构如下图所示：
+<br>构建两机构，每个机构两个节点，相同账本（群组1）的区块链环境，执行后的节点结构如下图所示：
 ![一个群组](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/_images/tutorial_step_1.png)
 * sh a12b1c2.sh    机构B名称   机构B名称  机构C名称
-构建三机构，每个机构两个节点，两组账本的区块链环境，执行后的节点结构如下图所示：
+<br>构建三机构，每个机构两个节点，两组账本的区块链环境，执行后的节点结构如下图所示：
 ![两个群组](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/_images/tutorial_step_2.png)
 * sh a12b1c12.sh    机构B名称  机构B名称  机构B名称
-构建三机构，每个机构两个节点，两组账本的区块链环境，执行后的节点结构如下图所示：
+<br>构建三机构，每个机构两个节点，两组账本的区块链环境，执行后的节点结构如下图所示：
 ![两个群组](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/_images/tutorial_step_3.png)
 ##### 5.构建后目录及说明
     5.1 dist目录 
