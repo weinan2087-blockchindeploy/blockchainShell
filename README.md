@@ -1,4 +1,4 @@
- h1 利用FISCO-BCOS-2.0_RC3搭建区块链环境——企业级构建机构节点安装包
+利用FISCO-BCOS-2.0_RC3搭建区块链环境——企业级构建机构节点安装包
 
 1.脚本说明
 init.sh ，a1b1.sh，a12b1c2.sh，a12b1c12.sh 脚本构建FISCO-BCOS 2.0的区块链节点环境
