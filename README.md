@@ -37,6 +37,6 @@
 ![两个群组](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/_images/tutorial_step_3.png)
 ##### 5.构建后目录及说明
     5.1 dist目录 
-        节点构建完成成功后，会在当前目录下生成dist目录，里面包含节点的运行安装安装包；同时，也会在 blockchainShell生成解压后的机构节点安装包，可进行测试。
+        节点构建完成成功后，会在当前目录下生成dist目录，里面包含节点的运行安装安装包；同时，也会在 blockchainShell目录下生成解压后的机构节点安装包，可进行测试。
     5.2 控制台和sdk客户端证书
         在节点安装包和已解压的目录里面，已经存在节点控制台和sdk目录，无另需配置可直接使用。
